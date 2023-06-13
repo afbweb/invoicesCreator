@@ -45,7 +45,7 @@ const ListInvoices = () => {
             { label: 'Issue Date', value: iIssueDate },
             { label: 'Business name', value: bBusinessName },
             { label: 'Invoice Number', value: iInvoiceNumber },
-            { label: 'Total', value: invoiceTotal }
+            { label: 'Total', value: `$${invoiceTotal}` }
           ];
 
           return (
@@ -58,7 +58,7 @@ const ListInvoices = () => {
               <Button
                 onClick={() => handleModal.openView(index)}
                 type="button"
-                className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                variant="tertiary"
               >
                 <LinkIcon aria-hidden="true" />
                 View Invoice

@@ -58,7 +58,7 @@ const CreateInvoice = ({ handleCloseModal, setInvoices }: ICreateInvoice) => {
 
   const [invoiceData, setInvoiceData] = useState<InvoiceProps>(invoiceInfo);
 
-  const saveInvoices = () => {
+  const handleSaveInvoice = () => {
     const newInvoice: InvoiceProps = {
       ...invoiceData,
       invoiceItems: selectedItems,
@@ -79,11 +79,7 @@ const CreateInvoice = ({ handleCloseModal, setInvoices }: ICreateInvoice) => {
     setSubtotal(newSubtotal);
     setDiscount(newDiscount);
     setTotal(newTotal);
-  }, [selectedItems]);
-
-  const handleSaveInvoice = () => {
-    saveInvoices();
-  };
+  }, [selectedItems]);  
 
   const removeSelectedItem = (item: ProductOption) => {
     const updatedItems = selectedItems.filter(
